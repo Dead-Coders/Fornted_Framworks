@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<!-- Download JQuery Link -->
+	<!-- <script src="jquery-3.7.1.min.js"></script> -->
+
+	<!-- CDN LInk IN JQUERY -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<style >
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	div{
+		background-color: #879686;
+		color: white;
+		height: 30vh;
+		width: 100%;
+		margin-top:30px;
+		font-size: 100px;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		color: black;
+
+	}
+
+	.dd{
+		display: flex;
+		margin-top: 131px;
+		font-size: 30px;
+		margin-left: 370px;
+		border: 3px solid black;
+		border-radius: 8px;
+	}
+
+	.ss{
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		font-family: fantasy;
+		font-size: 50px;
+		font-weight: 400;
+		color: blue;
+	}
+
+.er{
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		font-family: fantasy;
+		font-size: 50px;
+		font-weight: 400;
+		color: red;
+	}
+
+	button{
+		display: flex;
+		margin-top: 60px;
+		margin-left: 541px;
+		font-size: 30px;
+		font-family: fantasy;
+		color: blue;
+		border-radius: 9px;
+		border-radius: 5px solid black;
+	}
+
+
+
+
+</style>
+<body>
+	<button>click me</button>
+
+	<div id="my">
+		this is my div
+	</div>
+
+	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<input  class = "dd" type="text" name="">
+	<span class="ss">Hey </span>
+	<span class="er"> Abdullah</span>
+	
+	  <!-- TOggle button Using JQuery  -->
+	<script>
+		$(document).ready(function() {
+			$('button').mouseenter(function(){
+				$('#my').toggle(1000);
+			});
+
+			$('button').mouseleave(function(){
+				$('#my').toggle(2000);
+			});
+		});
+
+		$(document).ready(function() {
+		
+		$('span').hide();
+		$('input').focus (function(){
+			$('.ss').show().fadeOut(3000);
+		});
+
+		$('input').blur (function(){
+			$('.er').show().fadeOut(3000);
+		});
+		 });
+	</script>
+
+   <!-- Normal Javascript TTo Toogle button -->
+	<!-- <script>
+		function myfunction() {
+			var X = document.getElementById("my");
+			if (X.style.display ==="none") {
+				X.style.display = "block";
+			} else {
+				X.style.display = "none";
+			}
+		}
+		
+});
+
+
+
+secod code
+
+$(document).ready(function () {
+    console.log('I am in a new file now');
+
+    //Your jquery code here
+    console.log("We are using jQuery");
+    // jQuery Syntax looks like this
+    // $('selector').action()
+
+    //clicks on all the p elements.
+    // $('p').click(); //click on p
+    // $('p').click(function () {
+    //     console.log('you clicked on p', this);
+    //     //  $('#id').hide();
+    //     //  $('.class').hide();
+    // }); //do this when we click on p
+
+    // $('p').dblclick(function () {
+    //     console.log('you double clicked on p', this);
+    //     //  $('#id').hide();
+    //     //  $('.class').hide();
+    // });
+    // $('p').hover(function () {
+    //     console.log('you hoverd on: ', this);
+    //     //  $('#id').hide();
+    //     //  $('.class').hide();
+    // },
+    // function (){
+
+    //     console.log('Thanks for coming')
+    // });
+
+
+    // there are three main types of selectors in jQuery 
+    // 1. element selector
+    // 2. id selector
+    // 3. class selector
+
+    // 1. Element selector -  This is an example of element selector which clicks on all p
+    // $('p').click();
+
+    // 2. Id selector - this is an example of id selector
+    // $('#second').click();
+
+    // 3. Class selector - this is an example of id selector
+    // $('.odd').click();
+
+    // other selectors
+    // $('*').click() // clicks on all the elements
+    // $('p.odd').click() // clicks on all the elements
+    // $('p:first').click() // clicks on all the elements
+
+    // Events in jQuery
+    // Mouse events = click, dblclick, mouseenter, mouseleave
+    // KeyboardEvent = keypress, keydown, MediaKeyStatusMap
+    // form events = submit, change, focus, blur
+    // document/window events = load, resize, scroll, unload
+
+    // demoing the on method
+    $('p').on(
+        {
+            click: function () {
+                console.log('Thanks for clicking', this);
+            },
+            mouseleave: function () {
+                console.log("mouseleave");
+
+            }
+
+
+
+        })
+
+    // $('#wiki').hide(1000, function () {
+    //     console.log("hidden");
+    // })   
+    // $('#wiki').show(1000, function () {
+    //     console.log("show");
+    // })  
+    $('#but').click(function () {
+        $('#wiki').fadeOut(5000);
+    })
+
+    //     fadeIn()
+    // fadeOut()
+    // fadeToggle()
+    // fadeTo()
+
+    // Slide methods - speed and callback parameters are optional
+    // $('#wiki').slideUp(1000, function(){
+    //     console.log('done');
+    // })
+    // $('#wiki').slideDown(1000)
+    // $('#wiki').slideToggle(1000)
+
+    // Animate function in jQuery
+    // $('#wiki').animate({
+    //     opacity:0.3,
+    //     height: '150px',
+    //     width:'350px'
+
+    // }, "fast")
+    // $('#wiki').animate({ opacity: 0.3 }, 4000);
+    // $('#wiki').animate({ opacity: 0.9 }, 1000);
+    // $('#wiki').animate({ width: '350px' }, 12000);
+
+    // $('#ta').val('setting it to harry');
+    // $('#ta').html('setting it to harry');
+    // $('#ta').html('setting it to harry3');
+    // $('#inp').html('setting it to harry3');
+    // $('#inp').val('setting it to harry3');
+    // $('#inp').empty()
+    // $('#wiki').empty()
+    // $('#wiki').text('you are good')
+    // $('#wiki').remove()
+
+    //     $('#wiki').addClass('myclass')
+    // $('#wiki').addClass('myclass2')
+    // $('#wiki').removeClass('myclass2')
+    // $('#wiki').css('background-color', 'red')
+    // $('#wiki').css('background-color')
+
+    // AJAX Using jQuery
+    // $.get('https://code.jquery.com/jquery-3.3.1.js', function (data, status) { alert(data); })
+
+    // $.get('https://code.jquery.com/jquery-3.3.1.js', function (data, status) { alert(status); })
+
+    // $.post('https://code.jquery.com/jquery-3.3.1.js',
+    //     { name: 'harry', channel: 'code with harry' },
+    //     function (data, status) { alert(status) });
+
+});
+
+
+< < Previous
+	</script> -->
+</body>
+</html>

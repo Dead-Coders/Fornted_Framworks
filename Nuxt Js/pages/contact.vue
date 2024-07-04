@@ -1,0 +1,3 @@
+<template>
+    <Contactpage></Contactpage>
+</template>

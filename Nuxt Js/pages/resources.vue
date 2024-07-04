@@ -1,0 +1,3 @@
+<template>
+    <Resourcesmain></Resourcesmain>
+</template>

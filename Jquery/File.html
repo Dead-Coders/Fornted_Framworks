@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<title></title>
+</head>
+<body>
+
+	<style>
+		#measure{
+			width: 600px;
+			height: 600px;
+			border: 10px solid black;
+			background: gray;
+		}
+	</style>
+
+<div id="measure">
+</div>
+
+<button id="show">Cheak</button>
+<br>
+<br>
+
+<input type="text" name="" id="widths">
+<input type="text" name="" id="heights">
+
+<script>
+	$(document).ready(function(){
+		$('#show').click(function (){
+			var x = "";
+			var y = "";
+
+			x += "the width of the div is " + $('#measure').width() + "px.";
+			y += "the width of the div is " + $('#measure').height() + "px.";
+            
+            $('#widths').val(x);
+            $('#heights').val(y);
+            
+
+           
+		});
+	})
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

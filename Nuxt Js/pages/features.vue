@@ -1,0 +1,3 @@
+<template>
+    <Feature></Feature>
+</template>
